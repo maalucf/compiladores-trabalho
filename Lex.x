@@ -16,6 +16,11 @@ $alpha = [a-Za-z]
 
 tokens :-
 <0> $white+ ; 
+
+<0> "int" {\s -> INT}
+<0> "double" {\s -> DOUBLE}
+<0> "string" {\s -> STRING}
+
 <0> @double {\s -> CDOUBLE (read s)} 
 <0> @int {\s -> CINT (read s)} 
 <0> @literal {\s -> LITERAL (read s)}
@@ -49,6 +54,7 @@ tokens :-
 <0> ";" {\s -> SEMI} 
 <0> "=" {\s -> ASSIGN} 
 <0> "read" {\s -> READ} 
+<0> "print" {\s -> PRINT}
 <0> @id {\s -> ID s}
 
 {

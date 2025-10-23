@@ -1,39 +1,48 @@
 module Token where
 
 data Token
-    = CINT Int
-    | CDOUBLE Double
-    | LITERAL String
+  = 
+  
+  -- tipo
+  INT
+  | DOUBLE
+  | STRING
+  
+  -- const
+  | CINT Int
+  | CDOUBLE Double
+  | LITERAL String
 
-    | ADD
-    | SUB
-    | MUL
-    | DIV
+  | ADD
+  | SUB
+  | MUL
+  | DIV
 
-    | LPAR
-    | RPAR
-    | LBRA
-    | RBRA
+  | LPAR
+  | RPAR
+  | LBRA
+  | RBRA
 
-    | AND
-    | OR
-    | NOT
+  | AND
+  | OR
+  | NOT
 
-    | IF
-    | ELSE
-    | WHILE
-    | FOR
+  | IF
+  | ELSE
+  | WHILE
+  | FOR
 
-    | RL -- <
-    | RG -- > 
-    | RLEQ -- <=
-    | RGEQ -- >=
-    | REQ -- ==
-    | RNEQ -- /=
+  | RL -- <
+  | RG -- > 
+  | RLEQ -- <=
+  | RGEQ -- >=
+  | REQ -- ==
+  | RNEQ -- /=
 
-    | COMMA
-    | SEMI
-    | ASSIGN
-    | READ
-    | ID String
-    deriving (Eq, Show)
+  | COMMA
+  | SEMI
+  | ASSIGN
+  | READ
+  | PRINT
+  | ID String
+  deriving (Eq, Show)
